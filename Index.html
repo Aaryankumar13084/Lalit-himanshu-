@@ -10,11 +10,12 @@
 
 <body>
 	<div class="main-header">
-		<p>Home</p>
-		<p>Blood Donor</p>
-		<p>Register as Donor</p>
-    <p> About</p>
+		<p onclick="backhome2()">Home</p>
+		<p onclick="blooddonor2()">Blood Donor</p>
+		<p onclick="registerdonor2()">Register as Donor</p>
+    <p onclick="about()"> About</p>
 	</div>
+  
 	<div class="main-div">
 		<!--i need a blood -->
 		 <div class="home">
@@ -31,13 +32,14 @@
              </div>
       </div>
       <!--register as donor-->
-<div class="register" onclick="registerme()" style="display: flex; justify-content:center;" >
+    
+       <div class="register" onclick="registerme()" style="display: flex; justify-content:center;" >
         <div id="register2" style="background: red;">
           <button style="text-align: center; color: white; background: red; border: none;" ><h1 style="font-size: 25px;">Register as donor</h1></button>
         </div>
   
          </div>
-       </div>
+      
     
     
     <div class="main-background" >
@@ -46,11 +48,12 @@
   </div>
   </div>
   
-  
-  
+     </div>
   
       <!--form-->
+    
 	 <div class="form" id="form" style="display: none;">
+     
         <div class="form-div-2">
         <div class="input"> 
           
@@ -124,7 +127,9 @@
           
         <div class="input">
           <label  name="blood-group" for="five">Select blood group</label><br />
+          
           <select   class="group" placeholder="Gender" name="Blood group">
+            <option value=""> --Select blood group--</option>
             <option  value="A positive">A positive (A+)</option>
             <option value="A negative">A negative (A-)</option>
             <option value="B positive">B positive (B+)</option>
@@ -137,23 +142,27 @@
         </div>
         
                  
-        <div class="input">
+      <!--  <div class="input">
           <label for="pincode">Enter pincode</label><br />
            <input placeholder="enter your pincode" type="number" class="pinecode" name="pincode" required /><br />
-        </div>
-          <button  style="text-align: center; background: green; padding:2px 100px;" onclick="find()" onclick="find2()" >Find</button><br>
+        </div>-->
+          <button  style="text-align: center;  background: rgb(8, 194, 51); padding:5px 100px; margin: 15px 5px  5px 5px;" onclick="find()" onclick="find2()" >Find</button><br>
           <div class="back" style="display: flex; justify-content: flex-end; ">
           <button style="text-align: center; padding:2px 10px; margin-top: 5px;  background: red;
     border: 2px solid darkred; border-radius: 3px;" onclick="back()">back</button></div>
         
       </div>
       </div>
-       
+     
+     
+     
       <!--star himanshu kashyap-->
-		 <div class="card" id="find" style="display: none ;">
+
+    <div id="form2">
+    <div class="card" id="find" style="display: none ;">
        
        <p>Click on the icons to call or whatsapp these users:</p>
-        
+       <div class="user"></div>  
        <div class="find-div"></div>
       
        
@@ -241,6 +250,9 @@
 				<div class="input2">
 					<label name="blood-group2" for="blood-group2">Select blood group</label><br />
 					<select id="blood-group2" class="group2" placeholder="Gender" name="Blood group2">
+            
+            <option value="">-- Select blood group--
+            </option>
 						<option value="A positive">A positive (A+)</option>
 						<option value="A negative">A negative (A-)</option>
 						<option value="B positive">B positive (B+)</option>
@@ -259,54 +271,59 @@
         
         
 				<div class="input2">
-					<label for="contact2" name="contact"> Contact no </label><br>
-					<input type="number" id="contact2" placeholder="contact no" name="contact" required />
+          <label for="contact2" name="contact"> Contact no </label><br>
+          
+					<input type="tel" id="contact2" placeholder="contact no" name="contact" required />
 				</div>
+        
 				<div class="input2">
-					<label for="whatsapp-no" name="whatsapp-no">Whatsapp no </label><br>
+          <label for="whatsapp-no" name="whatsapp-no">Whatsapp no </label> <p style="font-size: 10px; display: inline;">same as  above</p> <input type="checkbox" style="width: 20px;"onclick="updateInput()" /><br>
 					<input type="number" id="whatsapp-no2" placeholder="Enter whatsapp no" name="whatsapp-no"  maxlength="7"required>
 				</div>
-				<div class="input2">
-				<label for="pincode2">pincode:</label><br>
-<input type="text"  id="pincode2" placeholder="enter pincode" maxlength="7"required >
-				
-				</div>
-				<button style="text-align: center; background: green; padding:2px 65px;" onclick="submit()">Register me</button><br>
-				<div class="back2" style="display: flex; justify-content: flex-end; ">
+			
+        
+        <div  class='register2' style="display: flex;  justify-content: center; align-items: center; margin-bottom: 5px;">
+				<button style=" background: rgb(8, 194, 51); width: 200px; padding:5px 50px; margin: 20px 0px 5px 0px;" onclick="submit()">Register me</button><br>
+        </div>
+        
+          <div class="back2" style="display: flex; justify-content: flex-end; ">
 					<button style="text-align: center; padding:2px 10px; margin-top: 5px;  background: red;
     border: 2px solid darkred; border-radius: 3px;" onclick="back2()">back</button></div>
 			 
     </div>
       
       </div>
-	
-     
-      <div class="registerform"  style="display: none;"> 
-      
-      <div class="registerform2 ">
-  <img
-    src="https://i.ibb.co/ZMpt5VC/download-1.jpg"
-    alt="codeyogi"
-    style="width: 100px; height: 100px; align-self: center; border: 2px solid green; border-radius: 99px;"
-  />
-  <p>PROFILE</p>
-  <h2 class="districtresult"> </h2>
-        <h2 class="nameresult"> </h2>
-<h2 class="bloodresult"> </h2>
-<h2 class="noresult"> </h2>
-<h2 class="whatsappresult"> </h2>
-<h2 class="pincoderesult"> </h2>
-       
-  <div id="link">
-    <p class="p" onclick="back3()" style="background: red;">Back</p>
-  </div>
-        
-        </div>
     </div>
     
+    <div id="form4"> 
+      <div class="registerform"  style="display: none;"> 
+        
+    </div>
+      
+      <div id="about" style="display: none;">
+<div class="about" style=" height: 100vh;display:flex; justify-content:center; align-items: center;">
+  <div class="detail" style="background: lightgray; border: 3px solid black; border-radius: 7px;width: 300px; padding:10px;">
+  <h1 style="text-align:center; ">
+    Codeyogi</h1>
+  <p style="font-size:;">   CodeYogi is an online platform that offers coding tutorials, courses, and learning resources to help individuals develop programming and technical skills. It focuses on teaching various programming languages, software development concepts, and other technology-related topics, such as web development, data structures, and algorithms. CodeYogi often targets beginners, intermediate learners, and professionals looking to enhance their coding abilities, offering interactive content and projects to reinforce learning.
+
+The platform is designed to provide a hands-on approach to learning programming and tech skills.
+
+ </p>
+    
+    <h4 style="margin: 20px 0  5px 0; text-align: center;font-size:15px;">this project was made to showcase our skill</h4>
+  
+      </div>
+      </div>
+      </div>
+      
+      
+    </div>
 		<style>
       
       input{
+        padding: 6px;
+        border-radius: 6px;
         background: rgb(193, 195, 199);
       }
 		* {
@@ -315,17 +332,23 @@
 			text-decoration: none;
 		}
 select{
+   padding: 6px;
+        border-radius: 6px;
         background: rgb(193, 195, 199);
   width: 100%;
       }
       
 		.main-header p {
-			color: black;
+			color: white;
 		}
-
+   
+      label{
+         font-size: 13px;  
+      }
+      
 		.main-header {
-			background: grey;
-			height: 40px;
+			background: rgb(235, 9, 51);
+			height: 50px;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -335,7 +358,7 @@ select{
 		body {
        
 
-			background: url("https://i.ibb.co/64L04p2/pattern-1.jpg") ;
+			background: url("https://i.ibb.co/RzbPgMR/Screenshot-2024-11-05-18-57-12-255-com-chrome-beta-2.jpg") ;
 		
 		}
 
@@ -384,7 +407,7 @@ select{
 			max-width: 400px;
 			border: 2px solid black;
 			border-radius: 10px;
-			padding: 20px;
+			padding: 5px;
 			background: lightgrey;
 		}
 
@@ -480,7 +503,7 @@ select{
 		}
 
 		#or2 h1 {
-			color: darkred;
+			color: red;
 		}
 
 		#register {
@@ -541,13 +564,11 @@ p {
   font-size: 15px;
 }
 
-      
       .bottom-background{
-      margin-top: 10%;
-           background: url("https://i.ibb.co/mJXJGx2/blood-1.png") no-repeat  top center/cover; 
-        width: 30%;
-        min-height: 200px;
-        max-height: 89vh;
+        padding: 10px;
+      margin-top: 5%;
+           background: url("https://i.ibb.co/mJXJGx2/blood-1.png") no-repeat  bottom center; 
+           width: 100%;
       } 
       
       @media (max-width: 400px){
@@ -566,33 +587,63 @@ p {
       }
       
       .main-background{
+        
         display: flex;
         justify-content: center;
       }
       
+      
 		</style>
 		<script>
+      
+      function updateInput(){
+        
+                  var input1Value = document.getElementById('contact2').value;
+            document.getElementById('whatsapp-no2').value = input1Value;
+ 
+      }
+      
 		function needBlood() {
 			let form = document.getElementById("form").style.display = "flex";
 			let needBlood = document.querySelector(".home").style.display = "none"
       let backgroumd = document.querySelector(".main-background").style.display ="none" 
-		}
+		
+      
+        let about = document.getElementById("about").style.display="none"
+      }
 
 		function back() {
 			let back = document.getElementById("form").style.display = "none"
 			let needBlood = document.querySelector(".home").style.display = "block"
       
       let backgroumd = document.querySelector(".main-background").style.display ="flex"
-		}
+	
+        let about = document.getElementById("about").style.display="none"
+      
+      }
 
 
 		function find() {
+      
+      let district = document.querySelector('.district').value;
+      
+      let blood = document.querySelector('.group').value
+      console.log(blood)
+      
+      if(district == '' || blood ==''){
+        alert('all input are mendotry')
+        return false;
+      }else{
+        true;
+      }
+      
 			let form = document.getElementById("form").style.display = "none";
 			//DICTRICT DETAIL\\
 			let find = document.getElementById("find").style.display = "flex"
-      
+      let main = document.querySelector('.find-div')
             
-      
+      main.innerHTML=``  
+ 
       const donors =[
         {
           name: "himanshu",
@@ -624,46 +675,7 @@ p {
           district: "saharanpur",
         },
         ]
-        let donors2 =[
-        
-        {
-          name2: "himanshu",
-          blood2: "b-",
-          phone2:"9536334389",
-          whatsapp2: "9536334389",
-          district2: "agra",
-        },
-        {
-          
-          name2: "Monu",
-          blood2: "b-",
-          phone2:"9536334389",
-          whatsapp2: "9536334389",
-          district2: "agra",
-        },
-         {
-          name2: "Lavish jatav",
-          blood2: "b-",
-          phone2:"9536334389",
-          whatsapp2: "9536334389",
-          district2: "agra",
-        },
-        {
-          name2: "raju",
-          blood2: "b-",
-          phone2:"9536334389",
-          whatsapp2: "9536334389",
-          district2: "agra",
-        },
-        
-      ]
-      let main = document.querySelector('.find-div')
   
-      let district ;
-      
-      let blood = document.querySelector('.group').value
-      console.log(blood)
-      
    if(blood == 'B positive'){
 
       for(let i = 0; i <= donors.length;i++){
@@ -686,7 +698,7 @@ p {
         <div class="user-detail">
         <h4>NAME:${nameo}</h4> 
         <h2>District: ${districto}</h2>  
-        <h2>Blood group:${bloodo}</h2>
+        <h2>Blood group: ${bloodo}</h2>
         </div>
         <div class="call">
        <a href="tel:+91${phoneo}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
@@ -698,26 +710,505 @@ p {
         console.log(div)
       } 
        }
-      else{
-           let div = document.createElement("div")
+       else if (blood == 'A positive'){
+ 
+         main.innerHTML=''
+ 
+      const donors2 =[
+        {
+          name: "Anshul sain",
+          blood: "A+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          
+          name: "Jeet kumar",
+          blood: "A+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Lallit jatav",
+          blood: "A+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Kunal",
+          blood: "A+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        ]
+         
+      for(let i = 0; i <= donors2.length;i++){
+           
+             
+        let div = document.createElement("div")
         div.className="main"
+       
+             
+      let nameo =  `${donors2[i].name}`
+      console.log(nameo)
         
-        div.innerHTML=`<p> user not find</p>`
-       main.appendChild(div)
+        let bloodo = `${donors2[i].blood}`
+        
+        let districto = document.querySelector('.district').value
+        
+        let phoneo = `${donors2[i].phone}`
+        
+        let whatsappo = `${donors2[i].whatsapp}`
+        
+        div.innerHTML=`
+         
+        <div class="user-detail">
+        <h4>NAME: ${nameo}</h4> 
+        <h2>District: ${districto}</h2>  
+        <h2>Blood group: ${bloodo}</h2>
+        </div>
+        <div class="call">
+       <a href="tel:+91${phoneo}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
+       <a href="https://wa.me/+91${whatsappo}">     <img style="width:40px;"src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png"/></a>
+        </div>
+     ` 
+        main.appendChild(div)
+        
+        console.log(div)
       }
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      }else if(blood == "A negative"){
+        
+         main.innerHTML=''
+ 
+      const donors3 =[
+        {
+          name: "Anjali",
+          blood: "A-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          
+          name: "Sajay dat",
+          blood: "A-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Lallit Yadav",
+          blood: "A-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Kunal rajput",
+          blood: "A-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        ]
+         
+      for(let i = 0; i <= donors3.length;i++){
+           
+             
+        let div = document.createElement("div")
+        div.className="main"
+       
+             
+      let nameo =  `${donors3[i].name}`
+      console.log(nameo)
+        
+        let bloodo = `${donors3[i].blood}`
+        
+        let districto = document.querySelector('.district').value
+        
+        let phoneo = `${donors3[i].phone}`
+        
+        let whatsappo = `${donors3[i].whatsapp}`
+        
+        div.innerHTML=`
+         
+        <div class="user-detail">
+        <h4>NAME: ${nameo}</h4> 
+        <h2>District: ${districto}</h2>  
+        <h2>Blood group: ${bloodo}</h2>
+        </div>
+        <div class="call">
+       <a href="tel:+91${phoneo}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
+       <a href="https://wa.me/+91${whatsappo}">     <img style="width:40px;"src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png"/></a>
+        </div>
+     ` 
+        main.appendChild(div)
+        
+        console.log(div)
+        
       }
+      }else if(blood == "B negative"){
+        
+         main.innerHTML=''
+ 
+      const donors4 =[
+        {
+          name: "Anjali Kumari",
+          blood: "B-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          
+          name: "Sajay dat",
+          blood: "B-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Lallit Yadav",
+          blood: "B-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Kunal rajput",
+          blood: "B-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        ]
+         
+      for(let i = 0; i <= donors4.length;i++){
+           
+             
+        let div = document.createElement("div")
+        div.className="main"
+       
+             
+      let nameo =  `${donors4[i].name}`
+      console.log(nameo)
+        
+        let bloodo = `${donors4[i].blood}`
+        
+        let districto = document.querySelector('.district').value
+        
+        let phoneo = `${donors4[i].phone}`
+        
+        let whatsappo = `${donors4[i].whatsapp}`
+        
+        div.innerHTML=`
+         
+        <div class="user-detail">
+        <h4>NAME: ${nameo}</h4> 
+        <h2>District: ${districto}</h2>  
+        <h2>Blood group: ${bloodo}</h2>
+        </div>
+        <div class="call">
+       <a href="tel:+91${phoneo}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
+       <a href="https://wa.me/+91${whatsappo}">     <img style="width:40px;"src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png"/></a>
+        </div>
+     ` 
+        main.appendChild(div)
+        
+        console.log(div)
+        
+      }
+      }
+      else if(blood == "O positive"){
+        
+         main.innerHTML=''
+ 
+      const donors5 =[
+        {
+          name: "Komal Rani",
+          blood: "O+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          
+          name: "Salaman Khan",
+          blood: "O+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "O+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Seema rajput",
+          blood: "O+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        ]
+         
+      for(let i = 0; i <= donors5.length;i++){
+           
+             
+        let div = document.createElement("div")
+        div.className="main"
+       
+             
+      let nameo =  `${donors5[i].name}`
+      console.log(nameo)
+        
+        let bloodo = `${donors5[i].blood}`
+        
+        let districto = document.querySelector('.district').value
+        
+        let phoneo = `${donors5[i].phone}`
+        
+        let whatsappo = `${donors5[i].whatsapp}`
+        
+        div.innerHTML=`
+         
+        <div class="user-detail">
+        <h4>NAME: ${nameo}</h4> 
+        <h2>District: ${districto}</h2>  
+        <h2>Blood group: ${bloodo}</h2>
+        </div>
+        <div class="call">
+       <a href="tel:+91${phoneo}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
+       <a href="https://wa.me/+91${whatsappo}">     <img style="width:40px;"src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png"/></a>
+        </div>
+     ` 
+        main.appendChild(div)
+        
+        console.log(div)
+        
+      }
+      }else if(blood == "O negative"){
+        
+         main.innerHTML=''
+ 
+      const donors6 =[
+        {
+          name: "Raaj",
+          blood: "O-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          
+          name: "Smeer Khan",
+          blood: "O-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "O-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Monu rajput",
+          blood: "O-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        ]
+         
+      for(let i = 0; i <= donors6.length;i++){
+           
+             
+        let div = document.createElement("div")
+        div.className="main"
+       
+             
+      let nameo =  `${donors6[i].name}`
+      console.log(nameo)
+        
+        let bloodo = `${donors6[i].blood}`
+        
+        let districto = document.querySelector('.district').value
+        
+        let phoneo = `${donors6[i].phone}`
+        
+        let whatsappo = `${donors6[i].whatsapp}`
+        
+        div.innerHTML=`
+         
+        <div class="user-detail">
+        <h4>NAME: ${nameo}</h4> 
+        <h2>District: ${districto}</h2>  
+        <h2>Blood group:${bloodo}</h2>
+        </div>
+        <div class="call">
+       <a href="tel:+91${phoneo}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
+       <a href="https://wa.me/+91${whatsappo}">     <img style="width:40px;"src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png"/></a>
+        </div>
+     ` 
+        main.appendChild(div)
+        
+        console.log(div)
+        
+      }
+      }else if(blood == "AB positive"){
+        
+         main.innerHTML=''
+ 
+      const donors5 =[
+        {
+          name: "Raam Singh",
+          blood: "AB+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          
+          name: "Rambeer",
+          blood: "AB+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "Ab+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Aman rajput",
+          blood: "AB+",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        ]
+         
+      for(let i = 0; i <= donors5.length;i++){
+           
+             
+        let div = document.createElement("div")
+        div.className="main"
+       
+             
+      let nameo =  `${donors5[i].name}`
+      console.log(nameo)
+        
+        let bloodo = `${donors5[i].blood}`
+        
+        let districto = document.querySelector('.district').value
+        
+        let phoneo = `${donors5[i].phone}`
+        
+        let whatsappo = `${donors5[i].whatsapp}`
+        
+        div.innerHTML=`
+         
+        <div class="user-detail">
+        <h4>NAME: ${nameo}</h4> 
+        <h2>District: ${districto}</h2>  
+        <h2>Blood group: ${bloodo}</h2>
+        </div>
+        <div class="call">
+       <a href="tel:+91${phoneo}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
+       <a href="https://wa.me/+91${whatsappo}">     <img style="width:40px;"src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png"/></a>
+        </div>
+     ` 
+        main.appendChild(div)
+        
+        console.log(div)
+        
+      }
+      }else if(blood == "AB negative"){
+        
+         main.innerHTML=''
+ 
+      const donors5 =[
+        {
+          name: "Sanju",
+          blood: "AB-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          
+          name: "Gorav Kashyap",
+          blood: "AB-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Veer Partaap",
+          blood: "AB-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Partaapo rajput",
+          blood: "AB-",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        ]
+         
+      for(let i = 0; i <= donors5.length;i++){
+           
+             
+        let div = document.createElement("div")
+        div.className="main"
+       
+             
+      let nameo =  `${donors5[i].name}`
+      console.log(nameo)
+        
+        let bloodo = `${donors5[i].blood}`
+        
+        let districto = document.querySelector('.district').value
+        
+        let phoneo = `${donors5[i].phone}`
+        
+        let whatsappo = `${donors5[i].whatsapp}`
+        
+        div.innerHTML=`
+         
+        <div class="user-detail">
+        <h4>NAME: ${nameo}</h4> 
+        <h2>District: ${districto}</h2>  
+        <h2>Blood group: ${bloodo}</h2>
+        </div>
+        <div class="call">
+       <a href="tel:+91${phoneo}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
+       <a href="https://wa.me/+91${whatsappo}">     <img style="width:40px;"src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png"/></a>
+        </div>
+     ` 
+        main.appendChild(div)
+        
+        console.log(div)
+        
+      }
+      }
+      };
       
       
  
@@ -744,8 +1235,6 @@ p {
       
 		function registerme() {
       
-      
-      
 			let registerby = document.querySelector(".main-form").style.display = "flex"
 			let needBlood2 = document.querySelector(".home").style.display = "none"
       
@@ -758,8 +1247,157 @@ p {
       
       let backgroumd = document.querySelector(".main-background").style.display ="flex"
     
+		}    
+     
+      	function submit() {
+      	    let name = document.getElementById("name2").value
+       
+			let district = document.getElementById("district2").value
+			
+      
+      let bloodgroup=document.getElementById("blood-group2").value
+	
+  
+      
+      let contact = document.getElementById("contact2").value
+      
+      
+      let whatsapp = document.getElementById("whatsapp-no2").value
+     
+  
+      if(name == "" || district == "" ||  bloodgroup == ""|| contact == "" || whatsapp == "" ){
+        alert('all input are mendatory')
+        return false;
+      }else if(whatsapp.length > 10 || whatsapp.length < 10 || contact.length > 10 || contact.length < 10){
+        alert("Number should be of 10 digit ! Please enter valid number")
+        return false;
+      }else{
+        true;
+      }
+   
+          
+      let registerby = document.querySelector(".main-form").style.display = "none"
+      
+      let form = document.querySelector(".registerform").style.display="flex"
+      
+      let  formdiv = document.querySelector(".registerform") 
+      
+      formdiv.inerHTML=``
+          formdiv.innerHTML=`
+      <div class="registerform2 ">
+  <img
+    src="https://i.ibb.co/ZMpt5VC/download-1.jpg"
+    alt="codeyogi"
+    style="width: 100px; height: 100px; align-self: center; border: 2px solid green; border-radius: 99px;"
+  />
+  <p>PROFILE</p>
+  <h2>Name: ${name} </h2>
+        <h2>District: ${district} </h2>
+<h2> Blood-group: ${bloodgroup}
+</h2>
+<h2>Phone No: ${contact} </h2>
+<h2>Whatsapp No: ${whatsapp} </h2>
+  <div id="link">
+    <p class="p" onclick="back3()" style="background: red;">Back</p>
+  </div>
+      </div>`
+      
+        
+          let userdiv = document.querySelector(".user")
+          
+          for(let i = 1; i <=1; i++){
+            
+             let div = document.createElement("div")
+             div.className="main"
+       
+       div.innerHTML=`
+         
+        <div class="user-detail">
+        <h2 style="  font-size: 10px;text-align: center;">YOU</h2>
+        <h4>NAME: ${name}</h4> 
+        <h2>District: ${district}</h2>  
+        <h2>Blood group: ${bloodgroup}</h2>
+        
+        </div>
+        <div class="call">
+       <a href="tel:+91${contact}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
+       <a href="https://wa.me/+91${whatsapp}">     <img style="width:40px;"src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png"/></a>
+        </div>
+     ` 
+        userdiv.appendChild(div)
+            console.log(div)
+          }
+ 
+         
+		
 		}
+      
+      function backhome2(){
+        let home = document.querySelector(".home").style.display="block"
+           let backgroumd = document.querySelector(".main-background").style.display ="flex" 
+           
+           let form = document.querySelector(".registerform").style.display="none"
+    
 
+			let registerby = document.querySelector(".main-form").style.display = "none"
+      
+      	let find = document.getElementById("find").style.display = "none"
+
+       		let back = document.getElementById("form").style.display = "none"
+          
+        let about = document.getElementById("about").style.display="none"
+      }
+      
+      function blooddonor2(){
+        let home = document.querySelector(".home").style.display="none"
+           let backgroumd = document.querySelector(".main-background").style.display ="none" 
+           
+           let form = document.querySelector(".registerform").style.display="none"
+    
+
+			let registerby = document.querySelector(".main-form").style.display = "none"
+      
+      	let find = document.getElementById("find").style.display = "none"
+
+       		let back = document.getElementById("form").style.display = "flex"
+          
+        let about = document.getElementById("about").style.display="none"
+          
+      } 
+      function registerdonor2(){
+        let home = document.querySelector(".home").style.display="none"
+           let backgroumd = document.querySelector(".main-background").style.display ="none" 
+           
+           let form = document.querySelector(".registerform").style.display="none"
+    
+
+			let registerby = document.querySelector(".main-form").style.display = "flex"
+      
+      	let find = document.getElementById("find").style.display = "none"
+
+       		let back = document.getElementById("form").style.display = "none"
+      
+        let about = document.getElementById("about").style.display="none"
+          
+          }
+      
+      function about(){
+        let home = document.querySelector(".home").style.display="none"
+           let backgroumd = document.querySelector(".main-background").style.display ="none" 
+           
+           let form = document.querySelector(".registerform").style.display="none"
+    
+
+			let registerby = document.querySelector(".main-form").style.display = "none"
+      
+      	let find = document.getElementById("find").style.display = "none"
+
+       		let back = document.getElementById("form").style.display = "none"
+        let about = document.getElementById("about").style.display="block"
+        
+        
+                      }
+      
 		</script>
 </body>
 
